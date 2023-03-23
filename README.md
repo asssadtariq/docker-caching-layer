@@ -1,8 +1,7 @@
 # Docker Layer Caching
 
 <h2>What is Docker?</h2>
-<p>
-Docker is a platform as a service that build, ship and run applications using containers. Containers are isolated process. Containers provides application-level virtualization. VMs take a lot of space most probably in gigabytes whereas containers take size in megabytes. Containers require very few resources in order to build, deploy, run and manage. </p>
+<p> Docker is a platform as a service that build, ship and run applications using containers. Containers are isolated process. Containers provides application-level virtualization. VMs take a lot of space most probably in gigabytes whereas containers take size in megabytes. Containers require very few resources in order to build, deploy, run and manage. </p>
 
 <h2>What is Caching?</h2>
 Caching is a process of storing frequently used data in way that it is quickly available to CPU or any application. However, in DevOps, Caching is a technique to improve the performance of applications and services.
@@ -31,24 +30,31 @@ When you build a Docker image, Docker uses the cached layers from previous build
 However, if any layer has changed, Docker will rebuild that layer and any layers that depend on it. This ensures that your image is up to date with any changes you've made.
 
 To take advantage of layer caching, it's important to structure your Dockerfile in a way that takes advantage of layers. For example,
-•	FROM xyz-base-image
-•	RUN [run-command dependency-1 dependency-2 dependency-3 …] 
-•	COPY [copy-path]
-•	CMD [cmd run command]
+<ul>
+<li>FROM xyz-base-image</li>
+<li>RUN [run-command dependency-1 dependency-2 dependency-3 …]</li>
+<li>COPY [copy-path]</li>
+<li>CMD [cmd run command]</li>
+</ul>
 
-Version: N
-Jobs:
-Build_elixir
-Machine:
-	Image: any image
-	Docker_layer_caching: true/false
-Steps:
-	-----
-	-----
-FROM python:3.9-slim-buster 
-RUN pip install flask requests tensorflow
-COPY app.py /app/ 
-CMD ["python", "/app/app.py"] 
+<ul>
+<li>FROM python:3.9-slim-buster</li> 
+<li>RUN pip install flask requests tensorflow</li>
+<li>COPY app.py /app/</li> 
+<li>CMD ["python", "/app/app.py"]</li>
+</ul>
+
+<ul>
+<li>Version: N</li>
+<li>Jobs:</li>
+<li>Build_elixir</li>
+<li>Machine:</li>
+<li>	Image: any image</li>
+<li>	Docker_layer_caching: true/false</li>
+<li>Steps:</li>
+<li>-----</li>
+<li>-----</li>
+</ul>
 
 <h2>Conclusion</h2>
 If you have a complex Dockerfile with many dependencies then Docker layer caching can greatly help you to speed up the builds. Structuring of Dockerfile in a way that takes advantage of layers, you can greatly reduce the time it takes to build the Dockerfile
