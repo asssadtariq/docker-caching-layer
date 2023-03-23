@@ -1,7 +1,8 @@
 # Docker Layer Caching
 
 <h2>What is Docker?</h2>
-Docker is a platform as a service that build, ship and run applications using containers. Containers are isolated process. Containers provides application-level virtualization. VMs take a lot of space most probably in gigabytes whereas containers take size in megabytes. Containers require very few resources in order to build, deploy, run and manage. 
+<p>
+Docker is a platform as a service that build, ship and run applications using containers. Containers are isolated process. Containers provides application-level virtualization. VMs take a lot of space most probably in gigabytes whereas containers take size in megabytes. Containers require very few resources in order to build, deploy, run and manage. </p>
 
 	<h2>What is Caching?</h2>
 Caching is a process of storing frequently used data in way that it is quickly available to CPU or any application. However, in DevOps, Caching is a technique to improve the performance of applications and services.
