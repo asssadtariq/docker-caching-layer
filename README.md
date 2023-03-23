@@ -4,7 +4,7 @@
 <p>
 Docker is a platform as a service that build, ship and run applications using containers. Containers are isolated process. Containers provides application-level virtualization. VMs take a lot of space most probably in gigabytes whereas containers take size in megabytes. Containers require very few resources in order to build, deploy, run and manage. </p>
 
-	<h2>What is Caching?</h2>
+<h2>What is Caching?</h2>
 Caching is a process of storing frequently used data in way that it is quickly available to CPU or any application. However, in DevOps, Caching is a technique to improve the performance of applications and services.
 
 	<h2>Problems that occur without layer caching</h2>
@@ -20,11 +20,11 @@ Possible solutions to improve build times
 One way to speed up your builds is by taking advantage of Docker's layer caching. Layer caching allows Docker to reuse layers from previous builds if they haven't changed, rather than executing the entire Dockerfile from scratch each time.
 Docker layer caching mainly work with RUN, COPY, and ADD commands. RUN command allows to create a layer if the layer exist then the RUN command executes only once. COPY command inside Dockerfile allows to import one or more external files into a Docker image. Similarly, ADD command is used to import external files in Dockerfile.
 
-	<h2>What are Layers?</h2>
+<h2>What are Layers?</h2>
 Layer in Docker is a file system that is read-only, each instruction in a Dockerfile is executed it results in the creation of a new layer.
 Docker caches each layer separately, if one layer has been changed then Docker only rebuild that particular layer and the layers that are depended on it. 
 
-	<h2>How Does Layer Caching Work?</h2>
+<h2>How Does Layer Caching Work?</h2>
 When you build a Docker image, Docker uses the cached layers from previous builds, as long as they haven't changed. This means that if you have a Dockerfile with several dependencies that don't change frequently, Docker can reuse those layers across multiple builds, greatly reducing the time it takes to build your image.
 However, if any layer has changed, Docker will rebuild that layer and any layers that depend on it. This ensures that your image is up to date with any changes you've made.
 To take advantage of layer caching, it's important to structure your Dockerfile in a way that takes advantage of layers. For example,
