@@ -61,4 +61,4 @@ If you have a complex Dockerfile with many dependencies then Docker layer cachin
 
 <h2>References</h2>
 https://circleci.com/blog/config-best-practices-docker-layer-caching/
-https://d33wubrfki0l68.cloudfront.net/3a2987cd65b984522149216f416665d7f0e75107/0b847/assets/basics-caching/cache-algorithm.png
+https://medium.com/@asadtariq.at66/docker-layer-caching-2b1ea9132611
